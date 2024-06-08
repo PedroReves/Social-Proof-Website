@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --font: "League Spartan", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font);
+  font-size: 15px;
+  padding: 8rem;
+  background: url(../images/bg-pattern-top-mobile.svg) left top no-repeat, url(../images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+}
+
+.container__hero-title {
+  font-size: 4rem;
+  max-width: 26rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--very-dark-magenta);
+}
+
+.container__hero-desc {
+  color: var(--dark-grayish-magenta);
+  font-weight: 500;
+  max-width: 27rem;
+  font-size: 1.15rem;
+  margin: 1.5rem 0 3rem 0;
+}
+
+.container__hero-stars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 8rem;
+  padding: 1rem 0;
+}
+
+.container__hero-stars div {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  gap: .5rem;
+  max-width: 40rem;
+  padding: .65rem 1.25rem;
+  border-radius: 8px;
+  background-color: var(--light-grayish-magenta);
+}
+
+.container__hero-stars div:nth-child(2) {
+  position: relative;
+  left: 10%;
+}
+
+
+.container__hero-stars div:nth-child(3) {
+  position: relative;
+  left: 20%;
+}
+
+.container__hero-stars div p {
+  margin: 0 1rem;
+  font-weight: 700;
+  font-size: 1.10rem;
+  color: var(--very-dark-magenta);
+}
+
+.testimonials {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--white);
+}
+
+.testimonials__article {
+  background: var(--very-dark-magenta);
+  border-radius: 8px;
+  padding: 2rem;
+  height: fit-content;
+  width: fit-content;
+  line-height: 1.2;
+}
+
+.testimonials__article-info p {
+  color: var(--soft-pink);
+}
+
+.testimonials__wrapper {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.testimonials__article img {
+  border-radius: 50%;
+  width: 40px;
+}
+
+.testimonials__article-info {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.testimonials__article-desc {
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.testimonials__article:nth-child(2) {
+  margin: 1.5rem 0 0 0;
+}
+
+.testimonials__article:nth-child(3) {
+  margin: 3.5rem 0 0 0;
+}
+
+@media screen and (max-width: 900px) {
+
+  body {
+    padding: 3rem;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container__hero {
+    margin: 0 auto;
+  }
+
+  .container__hero-title {
+    font-size: 2.5rem;
+  }
+
+  .container__hero-desc {
+    margin-top: 3rem;
+  }
+
+  .container__hero-stars {
+    margin-left: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .container__hero-stars div {
+    flex-direction: column;
+  }
+
+  .container__hero-stars div div {
+    flex-direction: row;
+  }
+
+  .container__hero-stars div:nth-child(2) {
+    position: relative;
+    left: 0;
+  }
+
+  .container__hero-stars div:nth-child(3) {
+    position: relative;
+    left: 0;
+    margin-bottom: 3rem;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    width: 100%;
+    gap: .25rem;
+  }
+}
